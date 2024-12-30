@@ -107,8 +107,10 @@ try:
             thing = item['payload'].get('action', [])
             time = item['created_at']
             data.append(f"- A new sponsorship {thing} in {repo} at {time} ")
+
     for item in data:
         print(item)
+
 except IndexError:
     print("Usage: gh-activity <username>")
 
